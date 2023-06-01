@@ -1,0 +1,10 @@
+Chapter 1
+
+Important Points
+
+1. What makes a database relational?
+- it conforms to a set of practices called rules of normalization
+
+First NF - database doesn't contain any repeating attributes
+Second NF - violated when an attributes depends only a portion of the primary key
+Third NF - violated when transitive dependency exists, attribute is dependent on non-primary or non-candidate key
