@@ -1,0 +1,14 @@
+declare
+	procedure p_print(
+		i_str1_tx varchar2 := 'hello',
+    	i_str2_tx varchar2 := 'world',
+    	i_end_tx varchar2 := '!'
+    ) is
+	begin
+		dbms_output.put_line(i_str1_tx||' '||i_str2_tx||' '||i_end_tx);
+	end;
+begin
+	p_print('Hi',i_end_tx=>'...');
+	p_print(i_str1_tx=>'Hi',i_end_tx=>'...');
+	p_print();
+end;

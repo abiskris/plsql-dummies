@@ -1,0 +1,14 @@
+create or replace trigger emp_biu
+before insert or update
+of sal,comm
+on emp
+for each row
+declare
+	v_error_tx varchar2(2000);
+begin
+	if :new.comm + :new.sal > 10000
+	then
+		v_error_tx := :old.ename||' cannot have that much!';
+		raise_application_error(-20999,v_error_tx);
+	end if;
+end;

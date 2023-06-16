@@ -1,0 +1,15 @@
+ declare
+	v_hour_nr number := 12;
+	v_min_nr number := 20;
+procedure p_split(i_date_dt DATE, o_hour_nr in out number, o_min_nr in out number)
+	is
+	begin
+		dbms_output.put_line(o_hour_nr||'/'||o_min_nr);
+		o_hour_nr := to_char(i_date_dt,'hh24');
+		o_min_nr := to_char(i_date_dt,'mi');
+		dbms_output.put_line(o_hour_nr||'/'||o_min_nr);
+	end;
+begin
+	p_split(sysdate,v_hour_nr,v_min_nr);
+	dbms_output.put_line('Total minutes:'||(v_hour_nr*60+v_min_nr));
+end;

@@ -1,0 +1,5 @@
+
+INSTEAD OF Triggers
+
+INSTEAD OF triggers are similar to DML triggers, but they exist only on views.
+Their main purpose is to perform data modifications of views that are not otherwise updatables.
