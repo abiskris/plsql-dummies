@@ -1,0 +1,18 @@
+ORA exception number is always negative
+
+
+-20999 to -20000 is reserved for user defined exception
+
+Format
+
+<exception_name> exception;
+
+raise <exception_name>;
+
+when <exception_name> then
+
+Assigning code to exception
+
+pragma exception_init(<exception_name>,<exception_code>);
+
+Exception can't be handled when declared in the declare or in the exception section
