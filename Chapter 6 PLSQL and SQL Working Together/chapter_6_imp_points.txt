@@ -1,0 +1,27 @@
+Cursors are special PL/SQL objects that you define in the declaration section of a program.
+
+declare
+	cursor <c_name> is
+	...
+begin
+	open <c_name>
+	fetch <c_name> into <vars>
+	close <c_name>
+end;
+
+Returning more than 1 variable - use record type, %ROWTYPE
+
+Status info of cursor variables
+
+%FOUND, %NOTFOUND, %ISOPEN, %ROWCOUNT
+
+ORA-14551: cannot perform a DML operation inside a query.
+
+For ex. f() - has an UPDATE
+
+select f()
+from dual;
+
+will throw the ORA error, since it the state of the col isn't deterministic
+
+"ORACLE can't be sure that modifying data, the session, the system, or object structure doesn't have any impact on the data you're querying or even on objects you are processing."
