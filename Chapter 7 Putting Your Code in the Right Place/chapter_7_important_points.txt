@@ -1,0 +1,7 @@
+Chapter 7 important notes
+
+Values that are set in objects declared in the package specification are session-specific.
+
+Row level triggers are similar to statement level triggers with "for each row" declaration
+
+INSTEAD OF triggers is for views
